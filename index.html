@@ -3,40 +3,44 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>Lesson 1 Calculator</title>
+    <title>Lesson 1 Console</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="vendor/bootstrap.css">
 
   </head>
-  <body ng-app="calculator" id="app-container">
+  <body>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
-          <a class="brand" href="#">THT</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-	      <li>
-		<a href="#/calculator">Calculator</a>
-	      </li>
-	      <li>
-		<a href="#/walkthrough">Walkthrough</a>
-	      </li>
-            </ul>
-          </div>
+          <a class="brand" href="#">Javascript</a>
         </div>
       </div>
     </div>
     
-    <div class="ng-view-container">
-      <div ng-view class="ng-view-instance"></div>
-    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h1> Open up the console </h1>
 
-    <script src="vendor/angular.min.js"></script>
-    <script src="vendor/angular-route.min.js"></script>
+    <p>Most users just hit f12, mac will need to right click - inspect element - console</p>
+    <p> I think it's available in the menus somewhere, but honestly, who uses those?</p>
 
-    <script src="app.js"></script>
-    <script src="controller.js"></script>
+
+    <script type="text/javascript">
+
+      console.log('hi!, you\'ve found the console. You can enter javascript here to test');
+      console.log('or you can use this as output from your code (like I\'m doing now)');
+      console.log('if you want to see how this is running, view source (ctrl/command + u)');
+
+    </script>
+
+    <!--you've found the page source! you can also look through this in the "inspect element"-->
+    <!--pane of the developer tools - which also has some handy tools for checking the DOM-->
+    <!--make another console statement and run the test and you'll get the points-->
+    <!--seriously though, from now on you'll actually have to do stuff-->
+    <!--make sure you format the input as a string!-->
+
   </body>
 </html>
