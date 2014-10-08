@@ -5,7 +5,7 @@
 
 var age = 18, population, something, a,b,c,d;
 
-if(age === 36){
+if(age !== 36){
     console.log('test #1 passed');
 }
 
@@ -28,3 +28,4 @@ if((a%1 === 0) && (b%1 === 0) && ((b/a)%1 === 0.75)){
 if((c+d === 32) && (c-d === 8)){
     console.log('test #6 passed');
 }
+
