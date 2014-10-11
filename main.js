@@ -3,33 +3,57 @@
 // btw, don't worry about that first line. It just tells the browser about how to run the script
 // we put it everywhere, so if you don't care - don't - if you do, google it!
 
-var name = 'Jerry', neighbour, actress, postman, greeting, child;
 
-if(name === 'Jerry Seinfeld'){
-    console.log('test #1 passed');
+var shirt = true;
+var tie = false;
+
+var needsShirt;
+var needsTie;
+
+var pants, hat, hasTickets, bagsPacked, rainingOutside;
+
+
+// test #1
+
+if(pants){
+  console.log('passed test #1 1/4');  
 }
 
-if(neighbour + ' Kramer' === 'Cosmo Kramer'){
-    console.log('test #2 passed');
+if(!rainingOutside){
+    console.log('passed test #1 2/4');
 }
 
-if(greeting.substr(0,5) === 'Hello'){
-    console.log('test #3 passed');
+if(bagsPacked && hasTickets){
+    console.log('passed test #1 3/4');
 }
 
-if(greeting.indexOf(postman) !== -1){
-    console.log('test #4 passed');
+if(tie || (!needsTie)){
+    console.log('passed test #1 4/4');
 }
 
-if((actress[0] === 'J') && (actress[6] === 'L')){
-    console.log('test #5 passed');
+
+// test #2
+
+var isFormal = needsShirt && needsTie;
+
+isFormal? console.log('passed test #2 1/3'): console.log('failed test #2 1/3');
+
+var dressed = shirt && tie && pants && hat;
+
+var gettingReady = hasTickets ^ bagsPacked;
+
+if(gettingReady){
+    console.log('failed test #2 2/3');
+}else{
+    console.log('passed test #2 2/3');
 }
 
-if(actress.split(' ')[1].split('-')[1] === 'Dreyfus'){
-    console.log('test #6 passed');
+if(dressed){
+    console.log('failed test #2 3/3');
+}else if(shirt && tie && pants){
+    console.log('passed test #2 3/3');
+}else{
+    console.log('failed test #2 3/3');
 }
 
-if('' + 7 + ' Costanza' === child){
-    console.log('test #7 passed');
-}
-
+// test #3
