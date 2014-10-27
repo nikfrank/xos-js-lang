@@ -7,12 +7,6 @@
 var shirt = true;
 var tie = false;
 
-var needsShirt;
-var needsTie;
-
-var pants, hat, hasTickets, bagsPacked, rainingOutside;
-
-
 // test #1
 
 if(pants){
