@@ -89,8 +89,11 @@ var menu = [{
 // return the total price
 function order(customer, items, options){}
 
-function isKosher(items){}
-function isVegan(items){}
+function isKosher(item){}
+function isVegan(item){}
+
+function areKosher(items){}
+function areVegan(items){}
 
 function totalPrice(items){}
 
