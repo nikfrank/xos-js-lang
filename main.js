@@ -1,59 +1,97 @@
 'use strict';
 
-// btw, don't worry about that first line. It just tells the browser about how to run the script
-// we put it everywhere, so if you don't care - don't - if you do, google it!
+// define some objects, and an array of objects
+
+// note to misnagim:
+// all food is served on disposable cutlery and plates
+// all orders are handled separately on a to-go basis from separate kitchens
+// not mixing fish and meat is left up to the customer
+// not mingling with customers not observing kashrut is left up to the observers
+// calm down. we're not teaching the computer to observe Jewish law. it's just an example
+
+var customers = [];
+
+var currentCustomer = {
+    firstName:'Nik',
+    lastName:'Frank',
+    age:23,
+    regularOrder:'nana tea',
+    tipAvg:0.18,
+    kosher:true,
+    vegan:false
+};
 
 
-var shirt = true;
-var tie = false;
+var menu = [{
+    name:'coffee',
+    price:10,
+    calories:86,
+    type:'drink',
+    kashrutType:'pareve',
+    options:[{
+	name:'sugar',
+	price:0,
+	calories:100,
+	type:'condiment',
+	kashrutType:'pareve'
+    },{
+	name:'aspartame',
+	price:0,
+	calories:0,
+	type:'condiment',
+	kashrutType:'pareve'
+    },{
+	name:'creamer',
+	price:0,
+	calories:40,
+	type:'condiment',
+	kashrutType:'dairy'
+    }]
+},
+{
+    name:'toast',
+    price:30,
+    calories:400,
+    type:'food',
+    kashrutType:'pareve',
+    options:[{
+	name:'cheese',
+	price:8,
+	calories:115,
+	type:'food',
+	kashrutType:'dairy'
+    },{
+	name:'salmon',
+	price:16,
+	calories:130,
+	type:'food',
+	kashrutType:'pareve'
+    },{
+	name:'tofu',
+	price:20,
+	calories:99,
+	kashrutType:'pareve'
+    },{
+	name:'chicken',
+	price:20,
+	calories:135,
+	type:'food',
+	kashrutType:'meat'
+    }]
+}];
 
-var needsShirt;
-var needsTie;
 
-var pants, hat, hasTickets, bagsPacked, rainingOutside;
+// look at that readable data. niice.
 
+// the goal here is to fill in the following functions
 
-// test #1
+// check that the food is to the customer's kashrut & vegan standard
+// return the total price
+function order(customer, items, options){}
 
-if(pants){
-  console.log('passed test #1 1/4');  
-}
+function isKosher(items){}
+function isVegan(items){}
 
-if(!rainingOutside){
-    console.log('passed test #1 2/4');
-}
+function totalPrice(items){}
 
-if(bagsPacked && hasTickets){
-    console.log('passed test #1 3/4');
-}
-
-if(tie || (!needsTie)){
-    console.log('passed test #1 4/4');
-}
-
-
-// test #2
-
-var isFormal = needsShirt && needsTie;
-
-isFormal? console.log('passed test #2 1/3'): console.log('failed test #2 1/3');
-
-var dressed = shirt && tie && pants && hat;
-
-var gettingReady = hasTickets ^ bagsPacked;
-
-if(gettingReady){
-    console.log('failed test #2 2/3');
-}else{
-    console.log('passed test #2 2/3');
-}
-
-if(dressed){
-    console.log('failed test #2 3/3');
-}else if(shirt && tie && pants){
-    console.log('passed test #2 3/3');
-}else{
-    console.log('failed test #2 3/3');
-}
-
-// test #3
+// below is an example input from the test.js file::
