@@ -1,59 +1,61 @@
 'use strict';
 
-// btw, don't worry about that first line. It just tells the browser about how to run the script
-// we put it everywhere, so if you don't care - don't - if you do, google it!
+var foods = [];
 
+var tastyFoods = ['one oreo', 'package of oreos', 'package of doublestuf oreos',
+		  'dirty burger', 'mini dirty burger'];
 
-var shirt = true;
-var tie = false;
+var healthyFoods = ['potato', 'celery', 'carrot', 'banana', 'tofurkey'];
 
-var needsShirt;
-var needsTie;
+var allFoods = [tastyFoods, healthyFoods];
 
-var pants, hat, hasTickets, bagsPacked, rainingOutside;
+var tastyFoodCalories = [120, 4320, 6500, 3000, 1548.236];
+var healthyFoodCalories = [46, 5, 4, 120, 300];
 
+var tastyFoodFat = [];
+var healthyFoodFat = [];
+
+var diet = [];
 
 // test #1
 
-if(pants){
-  console.log('passed test #1 1/4');  
+if(foods[0] === 'potato'){
+  console.log('passed test #1 1/4');
 }
 
-if(!rainingOutside){
+if(foods.length === tastyFoods.length + healthyFoods.length){
     console.log('passed test #1 2/4');
 }
 
-if(bagsPacked && hasTickets){
+if(foods[6] === tastyFoods[1]){
     console.log('passed test #1 3/4');
 }
 
-if(tie || (!needsTie)){
+if(allFoods[0][0][0] === 'O'){
     console.log('passed test #1 4/4');
 }
 
 
-// test #2
 
-var isFormal = needsShirt && needsTie;
+// test #2 & 3
 
-isFormal? console.log('passed test #2 1/3'): console.log('failed test #2 1/3');
+// the user will fill in the functions under the given conditions
 
-var dressed = shirt && tie && pants && hat;
+// #2 (builtins) the user will write the functions without loops
+// #3 (looping) the user will write the functions without prototype methods
 
-var gettingReady = hasTickets ^ bagsPacked;
+function total(array){}
+function maxOrMin(array, maxOrMin){}
+function ascOrDesc(array, ascOrDesc){}
+function bounce(array){}
+function flatten(array){}
+function maxChunk(array, chunkSize){}
+function elimMinChunk(array, chunkSize){}
 
-if(gettingReady){
-    console.log('failed test #2 2/3');
-}else{
-    console.log('passed test #2 2/3');
-}
+// push & slice
 
-if(dressed){
-    console.log('failed test #2 3/3');
-}else if(shirt && tie && pants){
-    console.log('passed test #2 3/3');
-}else{
-    console.log('failed test #2 3/3');
-}
+// max min, easy sorting, map
+// shift, unshift, splice, slice, filter
+// join, pop, push, reduce, concat
 
-// test #3
+// every, filter, forEach
