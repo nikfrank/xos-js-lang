@@ -83,6 +83,13 @@ var menu = [{
 
 // look at that readable data. niice.
 
+// first test is item lookups, indexing
+
+// second test is generating menus per diet
+
+// third test is checking diet reqs on orders and billing
+
+
 // the goal here is to fill in the following functions
 
 // check that the food is to the customer's kashrut & vegan standard
