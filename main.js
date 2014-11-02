@@ -3,6 +3,14 @@
 // btw, don't worry about that first line. It just tells the browser about how to run the script
 // we put it everywhere, so if you don't care - don't - if you do, google it!
 
+
+// bugkill is init
+// first test is concat, escape, dereference, toUpperCase, toLowerCase, basic string replace
+// second test is indexOf, substr, split, charCodeAt, casting numbers
+
+
+// this lesson needs something about escape chars
+
 var name = 'Jerry', neighbour, actress, postman, greeting, child;
 
 if(name === 'Jerry Seinfeld'){
