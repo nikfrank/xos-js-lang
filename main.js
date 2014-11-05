@@ -45,9 +45,6 @@ if((a%1 === 0) && (b%1 === 0) && ((b/a)%1 === 0.75)){
 
 // test #2
 
-var x = 2, y = 6, z = 6, q = -14;
-
-
 if(Math.pow(x, y) === 64){
     console.log('passed test #2 1/5');
 }
