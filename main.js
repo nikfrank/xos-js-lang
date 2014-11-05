@@ -4,34 +4,74 @@
 // we put it everywhere, so if you don't care - don't - if you do, google it!
 
 
-// bugkill is init
 // test 1 is +-*/%,++,--, +=, -=, *=, /= comparisons
 // test 2 is Math.pow,floor,ceil,max,min,random,sqrt
-// test 3 is string conversions
 
-var age = 18, population, something, a,b,c,d;
+a--;
+--a;
+b++;
+++b;
 
-if(age !== 36){
-    console.log('test #1 passed');
+c += 5;
+d -= 4;
+
+c *= 3;
+d /= 8;
+
+if(a !== 36){
+    console.log('passed test #1 1/6');
 }
 
-if(population > 1000000){
-    console.log('test #2 passed');
+if(b*3704.6 >= 100000){
+    console.log('passed test #1 2/6');
 }
 
-if((something > 3) && (something < 4)){
-    console.log('test #3 passed');
+if((c > 3) && (c < 4)){
+    console.log('passed test #1 3/6');
 }
 
-if(a*b === 48){
-    console.log('test #4 passed');
+if(a*d === 48){
+    console.log('passed test #1 4/6');
+}
+
+if(d % 5 === 2){
+    console.log('passed test #1 5/6');
 }
 
 if((a%1 === 0) && (b%1 === 0) && ((b/a)%1 === 0.75)){
-    console.log('test #5 passed');
+    console.log('passed test #1 6/6');
 }
 
-if((c+d === 32) && (c-d === 8)){
-    console.log('test #6 passed');
+
+// test #2
+
+var x = 2, y = 6, z = 6, q = -14;
+
+
+if(Math.pow(x, y) === 64){
+    console.log('passed test #2 1/5');
 }
+
+if(Math.floor(Math.sqrt(x)) === 1){
+    console.log('passed test #2 2/5');
+}
+
+if(Math.max(q, z) === y){
+    console.log('passed test #2 3/5');
+}
+
+if(Math.ceil(Math.sqrt(-q)) !== Math.floor(Math.sqrt(-q))){
+    console.log('passed test #2 4/5');
+}
+
+if(!(x+y+z+q)){
+    console.log('passed test #2 5/5');
+}
+
+console.log(Math.random());
+console.log(Math.random());
+console.log(Math.random());
+console.log(Math.random());
+console.log(Math.random());
+console.log('woooooooooo!');
 
