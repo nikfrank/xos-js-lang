@@ -19,50 +19,50 @@ c *= 3;
 d /= 8;
 
 if(a !== 36){
-    console.log('passed test #1 1/6');
+    showResult('passed test #1 1/6');
 }
 
 if(b*3704.6 >= 100000){
-    console.log('passed test #1 2/6');
+    showResult('passed test #1 2/6');
 }
 
 if((c > 3) && (c < 4)){
-    console.log('passed test #1 3/6');
+    showResult('passed test #1 3/6');
 }
 
 if(a*d === 48){
-    console.log('passed test #1 4/6');
+    showResult('passed test #1 4/6');
 }
 
 if(d % 5 === 2){
-    console.log('passed test #1 5/6');
+    showResult('passed test #1 5/6');
 }
 
 if((a%1 === 0) && (b%1 === 0) && ((b/a)%1 === 0.75)){
-    console.log('passed test #1 6/6');
+    showResult('passed test #1 6/6');
 }
 
 
 // test #2
 
 if(Math.pow(x, y) === 64){
-    console.log('passed test #2 1/5');
+    showResult('passed test #2 1/5');
 }
 
 if(Math.floor(Math.sqrt(x)) === 1){
-    console.log('passed test #2 2/5');
+    showResult('passed test #2 2/5');
 }
 
 if(Math.max(q, z) === y){
-    console.log('passed test #2 3/5');
+    showResult('passed test #2 3/5');
 }
 
 if(Math.ceil(Math.sqrt(-q)) !== Math.floor(Math.sqrt(-q))){
-    console.log('passed test #2 4/5');
+    showResult('passed test #2 4/5');
 }
 
 if(!(x+y+z+q)){
-    console.log('passed test #2 5/5');
+    showResult('passed test #2 5/5');
 }
 
 console.log(Math.random());
@@ -72,3 +72,10 @@ console.log(Math.random());
 console.log(Math.random());
 console.log('woooooooooo!');
 
+
+
+
+function showResult(msg, passed){
+    console.dir(msg);
+    document.getElementById('results-container').innerHTML += '<p>'+msg+'</p>';
+}
