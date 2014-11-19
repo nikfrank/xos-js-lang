@@ -57,6 +57,6 @@ if(dressed){
 
 
 function showResult(msg, passed){
-    console.log(msg);
+    console.dir(msg);
     document.getElementById('results-container').innerHTML += '<p>'+msg+'</p>';
 }
