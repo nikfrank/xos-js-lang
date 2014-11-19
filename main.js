@@ -15,45 +15,54 @@ var name = 'Jerry';
 // test #1
 
 if(name === 'Jerry Seinfeld'){
-    console.log('passed test #1 1/4');
+    showResult('passed test #1 1/4');
 }
 
 if(neighbour + ' Kramer' === 'Cosmo Kramer'){
-    console.log('passed test #1 2/4');
+    showResult('passed test #1 2/4');
 }
 
 if(quote[0].toUpperCase() === quote[0]){
-    console.log('passed test #1 3/4');
+    showResult('passed test #1 3/4');
 }
 
 if((actress[0] === 'J') && (actress[6] === 'L')){
-    console.log('passed test #1 4/4');
+    showResult('passed test #1 4/4');
 }
 
 
 // test #2
 
 if(quote.indexOf('\'') !== -1){
-    console.log('passed test #2 1/6');
+    showResult('passed test #2 1/6');
 }
 
 if(greeting.indexOf(postman) !== -1){
-    console.log('passed test #2 2/6');
+    showResult('passed test #2 2/6');
 }
 
 if(greeting.substr(0,5) === 'Hello'){
-    console.log('passed test #2 3/6');
+    showResult('passed test #2 3/6');
 }
 
 if(actress.split(' ')[1].split('-')[1] === 'Dreyfus'){
-    console.log('passed test #2 4/6');
+    showResult('passed test #2 4/6');
 }
 
 if(postman.charCodeAt(2) === 119){
-    console.log('passed test #2 5/6');
+    showResult('passed test #2 5/6');
 }
 
 if('' + 7 + ' Costanza' === child){
-    console.log('passed test #2 6/6');
+    showResult('passed test #2 6/6');
 }
 
+
+
+
+
+
+function showResult(msg, passed){
+    console.dir(msg);
+    document.getElementById('results-container').innerHTML += '<p>'+msg+'</p>';
+}
