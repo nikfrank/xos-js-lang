@@ -15,27 +15,27 @@ var healthyFoodCalories = [46, 5, 4, 120, 300];
 // test #1
 
 if(foods[0] === 'potato'){
-  console.log('passed test #1 1/6');
+  showResult('passed test #1 1/6');
 }
 
 if(foods.length === tastyFoods.length + healthyFoods.length){
-    console.log('passed test #1 2/6');
+    showResult('passed test #1 2/6');
 }
 
 if(foods[6] === tastyFoods[1]){
-    console.log('passed test #1 3/6');
+    showResult('passed test #1 3/6');
 }
 
 if(allFoods[0][0][0] === 'O'){
-    console.log('passed test #1 4/6');
+    showResult('passed test #1 4/6');
 }
 
 if(tastyFoodFat[0] + tastyFoodFat[1] + tastyFoodFat[2] + tastyFoodFat[3] + tastyFoodFat[4] > 200){
-    console.log('passed test #1 5/6');
+    showResult('passed test #1 5/6');
 }
 
 if(healthyFoodFat[0] + healthyFoodFat[1] + healthyFoodFat[2] + healthyFoodFat[3] + healthyFoodFat[4] < 10){
-    console.log('passed test #1 6/6');
+    showResult('passed test #1 6/6');
 }
 
 // test #2
@@ -43,7 +43,7 @@ if(healthyFoodFat[0] + healthyFoodFat[1] + healthyFoodFat[2] + healthyFoodFat[3]
 /*
 if(typeof tastyFoodFat[ tastyFood.indexOf[diet[0]] ] === 'undefined'){
     if(typeof healthyFoodFat[ healthyFood.indexOf[diet[0]] ] > 3){
-	console.log('passed test #2 1/6');
+	showResult('passed test #2 1/6');
     }
 }
 */
@@ -75,3 +75,8 @@ function elimMinChunk(array, chunkSize){}
 
 
 
+
+function showResult(msg, passed){
+    console.dir(msg);
+    document.getElementById('results-container').innerHTML += '<p>'+msg+'</p>';
+}
