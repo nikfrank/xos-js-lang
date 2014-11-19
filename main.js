@@ -41,3 +41,13 @@ students[0].classes.push(classes[0]);
 // test #3
 
 // student should do all of that using member functions on the objects
+
+
+
+
+
+
+function showResult(msg, passed){
+    console.dir(msg);
+    document.getElementById('results-container').innerHTML += '<p>'+msg+'</p>';
+}
