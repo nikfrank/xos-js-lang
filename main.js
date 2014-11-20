@@ -64,12 +64,28 @@ if(typeof tastyFoodFat[ tastyFood.indexOf[diet[0]] ] === 'undefined'){
 // #2 (builtins) the user will write the functions without loops
 // #3 (looping) the user will write the functions without prototype methods
 
+// find the total of an array of numbers
 function total(array){}
+
+// find the max or min number in the array
+// maxOrMin is either 'max' or 'min'
 function maxOrMin(array, maxOrMin){}
+
+// sort the array ascending ('asc') or descending ('desc')
 function ascOrDesc(array, ascOrDesc){}
+
+// I don't know what bounce means
 function bounce(array){}
+
+// take an array of arrays, turn it into just an array
+// bonus points for recursive array flattener
 function flatten(array){}
+
+// find the contiguous chunk of size chunkSize which has the largest sum
 function maxChunk(array, chunkSize){}
+
+// return the array with the contiguous chunk of size chunkSize 
+// withe smallest sum removed
 function elimMinChunk(array, chunkSize){}
 
 
