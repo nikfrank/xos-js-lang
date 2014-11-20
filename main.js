@@ -71,20 +71,21 @@ function total(array){}
 // maxOrMin is either 'max' or 'min'
 function maxOrMin(array, maxOrMin){}
 
-// sort the array ascending ('asc') or descending ('desc')
+// return a sorted array ascending ('asc') or descending ('desc')
 function ascOrDesc(array, ascOrDesc){}
 
-// I don't know what bounce means
-function bounce(array){}
-
-// take an array of arrays, turn it into just an array
+// take an array of arrays, return just an array
 // bonus points for recursive array flattener
 function flatten(array){}
 
+// I haven't written solutions to these with just builtins yet,
+// so consider them bonus questions for the builtin test
+
 // find the contiguous chunk of size chunkSize which has the largest sum
+// return the sum
 function maxChunk(array, chunkSize){}
 
-// return the array with the contiguous chunk of size chunkSize 
+// return the array having had the contiguous chunk of size chunkSize 
 // withe smallest sum removed
 function elimMinChunk(array, chunkSize){}
 
