@@ -85,8 +85,8 @@ function flatten(array){}
 // return the sum
 function maxChunk(array, chunkSize){}
 
-// return the array having had the contiguous chunk of size chunkSize 
-// withe smallest sum removed
+// return the contiguous chunk of size chunkSize withe smallest sum
+// having been removed from the array (a la splice)
 function elimMinChunk(array, chunkSize){}
 
 
