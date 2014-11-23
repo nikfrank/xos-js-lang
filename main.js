@@ -22,8 +22,8 @@ if(neighbour + ' Kramer' === 'Cosmo Kramer'){
     showResult('passed test #1 2/4');
 }
 
-if(quote[0].toUpperCase() === quote[0]){
-    showResult('passed test #1 3/4');
+if(greeting.length === 12){
+    showResult('passed test #2 3/4');
 }
 
 if((actress[0] === 'J') && (actress[6] === 'L')){
@@ -33,11 +33,11 @@ if((actress[0] === 'J') && (actress[6] === 'L')){
 
 // test #2
 
-if(quote.indexOf('\'') !== -1){
+if(greeting.indexOf(postman) !== -1){
     showResult('passed test #2 1/6');
 }
 
-if(greeting.indexOf(postman) !== -1){
+if(quote[0].toUpperCase() === quote[0]){
     showResult('passed test #2 2/6');
 }
 
@@ -45,18 +45,50 @@ if(greeting.substr(0,5) === 'Hello'){
     showResult('passed test #2 3/6');
 }
 
-if(actress.split(' ')[1].split('-')[1] === 'Dreyfus'){
+if(actress.charAt(3) === 'i'){
     showResult('passed test #2 4/6');
 }
 
-if(postman.charCodeAt(2) === 119){
+if(actress.substr(-3) === 'fus'){
     showResult('passed test #2 5/6');
 }
 
-if('' + 7 + ' Costanza' === child){
+if(postman.charCodeAt(2) === 119){
     showResult('passed test #2 6/6');
 }
 
+
+// test #3
+// be familiar with arrays before doing test #3
+// be familiar with regexps, or be prepared to learn a bit
+
+if(quote.indexOf('\'') !== -1){
+    showResult('passed test #3 1/7');
+}
+
+if(quote.indexOf('\n') !== -1){
+    showResult('passed test #3 2/7');
+}
+
+if(quote.indexOf('"') > quote.indexOf('\n')){
+    showResult('passed test #3 3/7');
+}
+
+if('' + 7 + ' Costanza' === child){
+    showResult('passed test #3 4/7');
+}
+
+if(actress.split(' ')[1].split('-')[1] === 'Dreyfus'){
+    showResult('passed test #3 5/7');
+}
+
+if(quote.replace(/g/g,'') === quote){
+    showResult('passed test #3 6/7');
+}
+
+if(quote.match(/close-?talker/g) !== null){
+    showResult('passed test #3 7/7');
+}
 
 
 
