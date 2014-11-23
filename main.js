@@ -49,7 +49,6 @@ if(dressed){
     showResult('failed test #2 3/3');
 }
 
-// test #3
 
 
 
