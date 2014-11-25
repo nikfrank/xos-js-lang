@@ -2,45 +2,99 @@
 
 var students = [
     {
-	firstName:'Nox',
-	lastName:'Freebird',
+	name:{
+	    first:'Nox',
+	    middle:'Disco',
+	    last:'Freebird'
+	},
 	classes:[],
 	from:'England',
 	age:21,
 	languages:['en']
     },
-    {firstName:'Svetlana', lastName:'Kirilenka', classes:[], from:'Russia', age:27, languages:['ru','iw']},
-    {firstName:'Moishe', lastName:'Mishu', classes:[], from:'Israel', age:25, languages:['iw','en']},
-    {firstName:'Mendel', lastName:'Mishu', classes:[], from:'Israel', age:24, languages:['iw','en']},
-    {firstName:'Menachem', lastName:'Mishu', classes:[], from:'Israel', age:26, languages:['iw','en']}
+    {
+	name:{first:'Svetlana', middle:'Borosenkliana', last:'Kirilenka'},
+	classes:[], from:'Russia', age:27, languages:['ru','iw']
+    },
+    {name:{first:'Moishe', last:'Mishu'}, classes:[], from:'Israel', age:25, languages:['iw','en']},
+    {name:{first:'Mendel', last:'Mishu'}, classes:[], from:'Israel', age:24, languages:['iw','en']},
+    {name:{first:'Menachem', last:'Mishu'}, classes:[], from:'Israel', age:26, languages:['iw','en']}
 ];
 
-// note to the confused:: iw == hebrew (ע ~= i ו ~= w) it's part of ISO 639, so you'll see it sometimes. 'he' is also valid
+// NB: iw == hebrew (ע ~= i ו ~= w) it's part of ISO 639, so you'll see it sometimes. 'he' is also valid
 // google still uses it in translate.google.com urls (+ some DBs etc), so you may as well know what it is.
 // your complaints are legitimate. The guy who made it up in nineteen sixty whatever apologizes.
 
 var classes = [
     {name:'Political Science', limit:4, students:[], languages:['en','ru']},
     {name:'Math', limit:3, students:[], languages:['iw']},
-    {name:'Computer Science', limit:5, students:[], languages:['en']},
-    {name:'Physics', limit:10, students:[], languages:['iw', 'en']}
+    {name:'Computer Science', limit:4, students:[], languages:['en']},
+    {name:'Physics', limit:5, students:[], languages:['iw', 'en']}
 ];
 
 
-classes[0].students.push(students[0]);
-students[0].classes.push(classes[0]);
+function addS(c, s){
+    classes[c].students.push(students[s]);
+    students[s].classes.push(classes[c]);
+}
+
+addS(0,0); addS(0,1); addS(0,2); addS(0,3);
+           addS(1,1);            addS(1,3); addS(1,4);
+                      addS(2,2); addS(2,3); addS(2,4);
+addS(3,0); addS(3,1); addS(3,2);            addS(3,4);
+
+
+// write all the push code, pass all the tests, take code out
 
 // test #1
 
+// if you've changed the course limits or languages, I'll fail you. TRY ME!
+
+var anyClass = Math.floor(Math.random()*(classes.length-(1/1024)));
+
+if(classes[anyClass].students.length < classes[anyClass].limit){
+    showResult('passed test #1 1/4');
+}else{
+    showResult('failed test #1 1/4');
+}
+
+if((students[1].classes.length === 3)&&(students[2].classes.length === 3)&&
+   (students[3].classes.length === 3)&&(students[4].classes.length === 3)){
+    showResult('passed test #1 2/4');
+}
+
+var anyCsci = Math.floor(Math.random()*(classes[2].students.length-(1/1024)));
+
+if(classes[2].students[anyCsci].name.last === 'Mishu'){
+    showResult('passed test #1 3/4');
+}else{
+    showResult('failed test #1 3/4');
+}
+
+var anyMath = Math.floor(Math.random()*(classes[1].students.length-(1/1024)));
+
+if(classes[1].students[anyMath].from !== 'Russia'){
+    showResult('passed test #1 4/4');
+}else{
+    showResult('failed test #1 4/4');
+}
+
 // student should alter a few fields, calculate whether courses are full
+// calculate average age, have the right number of students in each class
+
 
 // test #2
 
+// cover typeof, in, 
+
+
 // student should write some functions which add / check / remove students, alter courses
+// also convenience functions for data output to front end primer
+
 
 // test #3
 
-// student should do all of that using member functions on the objects
+// student should do whatever possible using map, filter, etc.
 
 
 
