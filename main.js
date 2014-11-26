@@ -13,7 +13,7 @@ var students = [
 	languages:['en']
     },
     {
-	name:{first:'Svetlana', middle:'Borosenkliana', last:'Kirilenka'},
+	name:{first:'Svetlana', last:'Kirilenka'},
 	classes:[], from:'Russia', age:27, languages:['ru','iw']
     },
     {name:{first:'Moishe', last:'Mishu'}, classes:[], from:'Israel', age:25, languages:['iw','en']},
@@ -85,17 +85,30 @@ if(classes[1].students[anyMath].from !== 'Russia'){
 
 // test #2
 
-// cover typeof, in, 
+// cover typeof, in, .constructor
 
+if('middle' in students[1].name){
+    showResult('passed test #2 1/4');
+}
 
-// student should write some functions which add / check / remove students, alter courses
-// also convenience functions for data output to front end primer
+if(typeof students[1].name.middle === 'string'){
+    showResult('passed test #2 2/4');
+}
+
+if(('prereqs' in classes[3]) && (typeof classes[3]['prereqs'] === 'object') &&
+   (classes[3].prereqs.length)){
+    showResult('passed test #2 3/4');
+}
+
+if(classes[2].prereqs.constructor == Array){
+    showResult('passed test #2 4/4');
+}
+
 
 
 // test #3
 
-// student should do whatever possible using map, filter, etc.
-
+// do some stuff with stringify
 
 
 
