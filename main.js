@@ -33,19 +33,6 @@ var classes = [
 ];
 
 
-function addS(c, s){
-    classes[c].students.push(students[s]);
-    students[s].classes.push(classes[c]);
-}
-
-addS(0,0); addS(0,1); addS(0,2); addS(0,3);
-           addS(1,1);            addS(1,3); addS(1,4);
-                      addS(2,2); addS(2,3); addS(2,4);
-addS(3,0); addS(3,1); addS(3,2);            addS(3,4);
-
-
-// write all the push code, pass all the tests, take code out
-
 // test #1
 
 // if you've changed the course limits or languages, I'll fail you. TRY ME!
