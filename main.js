@@ -95,6 +95,42 @@ if(classes[2].prereqs.constructor == Array){
 
 // test #3
 
+var stringified;
+
+if(stringified === JSON.stringify(students[0])){
+    showResult('passed test #3 1/4');
+    console.log(stringified);
+}
+
+var serverResponseString;
+
+var parsed = JSON.parse(serverResponseString);
+
+if(Object.keys(parsed).reduce(function(prev, key){
+    return prev && (parsed[key].toString() == classes[0][key].toString());
+}, true)){
+    showResult('passed test #3 2/4');
+}
+
+
+var checkClass = true;
+
+for(var key in classes[0])
+    checkClass &= (parsed[key].toString() == classes[0][key].toString());
+
+if(checkClass){
+    showResult('passed test #3 3/4');
+}
+
+var NOTJSON = '{"blah":"hmm..."}';
+
+try{
+    JSON.parse(NOTJSON);
+    showResult('failed test #3 4/4');
+}catch(e){
+    showResult('passed test #3 4/4');
+}
+
 // do some stuff with stringify
 
 
