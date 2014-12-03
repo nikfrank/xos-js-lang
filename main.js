@@ -104,4 +104,7 @@ function areVegan(items){}
 
 function totalPrice(items){}
 
-// below is an example input from the test.js file::
+
+// also, these functions should be linked to the dom
+
+// that will require many works.
