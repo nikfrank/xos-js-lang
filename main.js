@@ -15,7 +15,7 @@ var currentCustomer = {
     firstName:'Nik',
     lastName:'Frank',
     age:23,
-    regularOrder:'nana tea',
+    regularOrder:['nana tea'],
     tipAvg:0.18,
     kosher:true,
     vegan:false
