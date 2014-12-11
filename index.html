@@ -6,16 +6,37 @@
     <title>Lesson 7 Functions</title>
 
     <link rel="stylesheet" href="style.css">
-    <!--link rel="stylesheet" href="vendor/bootstrap.css"-->
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
 
   </head>
   <body>
 
-    <h1> This is to be the restaurant interface </h1>
-
-    <p>
-      customers, current order, menu
-    </p>
+    <h1> This is some kind of restaurant </h1>
+    <div class="container-fluid">
+      <div class="row">
+	<div class="col-xs-4">
+	  <h3>Customers</h3>
+	  <div id="customer-container">
+	  </div>
+	</div>
+	<div class="col-xs-4">
+	  <h3>Order</h3>
+	  <button onclick="removeItem()">Remove</button>
+	  <div id="order-container">
+	  </div>
+	</div>
+	<div class="col-xs-4">
+	  <h3>Menu</h3>
+	  <button onclick="addItem()">Add to order</button>
+	  <div id="menu-container">
+	  </div>
+	</div>
+      </div>
+    </div>
+    <button onclick="placeOrder()">
+      Place Order
+    </button>
+	
 
     <div id="results-container"></div>
 

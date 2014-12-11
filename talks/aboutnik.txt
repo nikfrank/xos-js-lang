@@ -1,0 +1,51 @@
+Nik does not like following rules or doing paperwork, preferring to pay his taxes in cash.
+
+He started programming at age 9, calculus at 11, broke an IQ test and aced an LSAT hungover.
+
+Nik has dropped out of high school and university, having received an Honours BSc in Physics once.
+
+He has dabbled in electronic engineering - inventing a guitar pedal - and has written a .wav file by hand.
+
+Left stranded in Arad, he stubbornly walked halfway across the desert before taking the bus to Tel Aviv.
+
+He speaks only English, although he has been known to send texts in broken Hebrew andor Spanish.
+
+Nik is a strong believer in copyleft free software open-sourcism, yet tempted at times by paytheism.
+
+
+He is currently writing code using:
+
+nodejs, angularjs, heroku, postgreSQL, bash, phantomjs
+
+sometimes:
+
+aws js sdk, jquery, facebook api, google apis, bootstrap, azure
+
+dabbled in:
+
+*coin, C#, PHP, browser extensions, firefox/android mobile, batch, gruntjs
+
+past experience with:
+
+iOS obj-c, OpenGL, MATLAB, C++ (openFrameworks), mySQL, java, arduino
+
+
+and is planning on:
+
+learning Haskell, finishing his npm module, becoming very wealthy and starting a pomegranate farm.
+
+
+
+He will NOT fix your printer as he is incapable. He recommends inPrint (@ 1935 W Broadway Vancouver BC) 24/7 print shop.
+
+----------------------------------------------------------------------
+corporate version:
+-----------------------------------
+
+Nik was born a prototypical yiddishe genius - began programming at age 9, calculus at 11, completing an Honours Physics BSc. from UWO by age 16. Since then he has dabbled in microelectronic engineering (inventing a guitar pedal + audio editing and organization software system), mobile applications, and now web platform development & evangelism.
+
+He has experience with a wide variety of platforms and technologies, and has strong opinions about most of them.
+
+In his spare time, he dreams of having enough spare time to learn to kitesurf.
+
+Nik has read the iTunes terms and conditions, and doesn't understand what all the fuss is about.

@@ -1,17 +1,18 @@
 'use strict';
 
-var customers = [];
-
-var currentCustomer = {
+var customers = [{
     firstName:'Nik',
     lastName:'Frank',
-    age:23,
-    regularOrder:['nana tea'], // make this an actual order array
     tipAvg:0.18,
     kosher:true,
+    vegan:true
+},{
+    firstName:'Nox',
+    lastName:'Freebird',
+    tipAvg:0.04,
+    kosher:true,
     vegan:false
-};
-
+}];
 
 var menu = [{
     name:'coffee',
@@ -24,8 +25,7 @@ var menu = [{
 	{name:'aspartame', price:0, calories:0, type:'condiment', kashrutType:'pareve'},
 	{name:'creamer', price:0, calories:40, type:'condiment', kashrutType:'dairy'}
     ]
-},
-{
+},{
     name:'toast',
     price:30,
     calories:400,
@@ -33,8 +33,8 @@ var menu = [{
     kashrutType:'pareve',
     options:[
 	{name:'cheese', price:8, calories:115, type:'food', kashrutType:'dairy'},
-	{name:'salmon', price:16, calories:130, type:'food', kashrutType:'pareve'},
-	{name:'tofu', price:20, calories:99, kashrutType:'pareve'},
+	{name:'salmon', price:16, calories:130, type:'food', kashrutType:'fish'},
+	{name:'tofu', price:20, calories:99, type:'food', kashrutType:'pareve'},
 	{name:'chicken', price:20, calories:135, type:'food', kashrutType:'meat'}
     ]
 }];
@@ -46,10 +46,9 @@ var menu = [{
 // items is an array of items with their options listed
 
 function order(customer, items){
-
     // check that the food is to the customer's kashrut & vegan standard
-    if(customer.kosher) checkKosher(items);
-    if(customer.vegan) checkVegan(items);
+    if(customers[customer].kosher) console.log('kosher? '+checkKosher(items));
+    if(customers[customer].vegan) console.log('vegan? '+checkVegan(items));
 
     // return the total price
     return totalPrice(items);
@@ -57,31 +56,53 @@ function order(customer, items){
 
 function kashrutType(item){
     // return either null, pareve, dairy, meat
+    var type = item.kashrutType;
 
+    for(var i=item.options.length; i-->0;){
+	if(type === 'pareve') type = item.options[i].kashrutType;
+	else{
+	    if((type === 'dairy') && (item.options[i].kashrutType === 'meat')) return null;
+	    if((type === 'meat') && (item.options[i].kashrutType === 'dairy')) return null;
+	}
+    }
+    return type;
 }
 
 function isVegan(item){
     // return true or false
+    return kashrutType(item) === 'pareve';
 }
 
 function checkKosher(items){
     // loop through items into kashrutType
     // check that their combination is kosher
 
+    return items.reduce(function(p, c){
+	var type = kashrutType(c);
+	if(p === 'pareve') return type;
+	else{
+	    if((p === 'dairy') && (type === 'meat')) return null;
+	    if((p === 'meat') && (type === 'dairy')) return null;
+	}
+	return p;
+    }, 'pareve') !== null;
 }
 
 function checkVegan(items){
     // &= loop through items
+    return items.reduce(function(p, c){
+	return p && isVegan(c);
+    }, true);
 }
 
 function totalPrice(items){
-    // loop through, sum
+    // loop through items and options, sum
+    return items.reduce(function(p, c){
+	return p + c.price + c.options.reduce(function(pp, cc){
+	    return pp + cc.price;
+	}, 0);
+    }, 0);
 }
-
-
-// also, these functions should be linked to the dom in the next lesson
-
-
 
 
 
