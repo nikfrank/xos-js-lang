@@ -9,10 +9,12 @@ setTimeout(function(){
    
     // shit html into the customers container
     var cc = document.getElementById('customer-container');
-
+console.log(customers);
     for(var i=customers.length; i-->0;){
 	cc.innerHTML += '<p onclick="changeCustomer('+i+')" id="customer-'+i+'">'+
-	    customers[i].firstName + ' ' + customers[i].lastName + '</p>';
+	    customers[i].firstName + ' ' + customers[i].lastName +
+	    (customers[i].kosher?' (kosher) ':' ') + (customers[i].vegan?'(vegan)':'')+
+	    '</p>';
     }
 
     // shit html into the menu container

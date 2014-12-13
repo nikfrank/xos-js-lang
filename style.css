@@ -17,3 +17,8 @@ hr {
 #menu-container > ul > li{
     margin-top:20px;
 }
+
+#invoice-container {
+    display:inline-block;
+    font-size:30px;
+}
