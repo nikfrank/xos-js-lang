@@ -101,7 +101,8 @@ function indexer(array, key){
 
 
 
-function showResult(msg, passed){
+function showResult(msg){
     console.dir(msg);
-    document.getElementById('results-container').innerHTML += '<p>'+msg+'</p>';
+    document.getElementById('results-container').innerHTML +=
+    '<p class="'+((msg.indexOf('pass')>-1)?'passed-msg':'failed-msg')+'">'+msg+'</p>';
 }
