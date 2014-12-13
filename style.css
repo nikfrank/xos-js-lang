@@ -13,3 +13,18 @@ hr {
     width:60%;
     height:4px;
 }
+
+
+.passed-msg{
+    background-color:#afa;
+    display:inline-block;
+    border-radius:8px;
+    padding:12px;
+}
+
+.failed-msg{
+    background-color:#faa;
+    display:inline-block;
+    border-radius:8px;
+    padding:12px;
+}
