@@ -47,6 +47,7 @@ var menu = [{
 
 function order(customer, items){
     // check that the food is to the customer's kashrut & vegan standard
+    // in l-8 use a confirm statement
     if(customers[customer].kosher) console.log('kosher? '+checkKosher(items));
     if(customers[customer].vegan) console.log('vegan? '+checkVegan(items));
 
@@ -110,16 +111,34 @@ function totalPrice(items){
 // define five functions, without implementing them - have the user implement them.
 
 // test 2
-// have the user implement a function which takes a callback as a param
+// have the user call a function which takes a callback as a param
+
+  // implement a check kosher as a "remote service"
+  // student calls checkKosher(array, callback(err, type))
 
 // test 3
-// have the user implement a closure properly
+// have the user implement a function which takes a callback as a param
+
+  // student implement "remote service" from previous test
 
 // test 4
-// have the user implement a timeout properly
+// have the user implement a closure properly
+
+  // implement an async version of the "remote service"
+  // student must loop check array of orders and mark original order via enclosed calls
 
 // test 5
+// have the user implement a timeout properly
+
+  // student must implement async notification with loading gif
+
+// test 6
 // have the user implement a timeout with a closure
+
+  // have student implement async "remote service" from before
+
+// test 7
+// have the student use an actual remote service with an ajax call
 
 
 

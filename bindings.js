@@ -19,26 +19,30 @@ setTimeout(function(){
 
     var mc = document.getElementById('menu-container');
 
-    mc.innerHTML += '<ul>';
+    var numenu = '';
+
+    numenu += '<ul>';
 
     for(var i=menu.length; i-->0;){
-	mc.innerHTML += '<li onclick="setMenuItem('+i+')" id="menu-item-'+i+'">' +
+	numenu += '<li onclick="setMenuItem('+i+')" id="menu-item-'+i+'">' +
 	    menu[i].name + ': ₪' + menu[i].price;
 
 	if(menu[i].options.length){
-	    mc.innerHTML += '<ul>';
+	    numenu += '<ul>';
 	    for(var j=menu[i].options.length; j-->0;){
-		mc.innerHTML += '<li onclick="setMenuOption('+j+')" id="menu-item-'+i+'-option'+j+'">' +
+		numenu += '<li onclick="setMenuOption('+j+')" id="menu-item-'+i+'-option'+j+'">' +
 		    menu[i].options[j].name + ': ₪' + menu[i].options[j].price + '</li>';
 	    }
-	    mc.innerHTML += '</ul>';
+	    numenu += '</ul>';
 	}
 	
-	mc.innerHTML += '</li>';
+	numenu += '</li>';
     }
 
-    mc.innerHTML += '</ul>';
-   
+    numenu += '</ul>';
+
+    mc.innerHTML = numenu;
+
 }, 0);
 
 // DRY this code. ugly.
@@ -87,7 +91,8 @@ function addItem(){
     var nuitem = JSON.parse(JSON.stringify(menu[currentMenuItem]));
 
     if(currentMenuOption !== -1)
-	nuitem.options = [JSON.parse(JSON.stringify(menu[currentMenuItem])).options[currentMenuOption]];
+	nuitem.options =
+	[JSON.parse(JSON.stringify(menu[currentMenuItem])).options[currentMenuOption]];
     else
 	nuitem.options = [];
 
@@ -131,6 +136,7 @@ function bindOrder(){
 
 function placeOrder(){
     // order(currentCustomer, currentOrder.filter(currentCustomer))
+    document.getElementById('invoice-container').innerHTML = '';
     if(currentCustomer === -1) return;
 
     var price = order(currentCustomer, currentOrder.filter(function(m){
@@ -139,7 +145,14 @@ function placeOrder(){
 
     // alert with the total price
 
-    console.log(price);
+    document.getElementById('invoice-container').innerHTML = 'Total: ₪'+price;
 
     // clear the items, bindOrder
+
+    currentOrder = currentOrder.filter(function(m){
+	return m.customer !== currentCustomer;
+    });
+
+    bindOrder();
+
 }
