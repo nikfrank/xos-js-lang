@@ -48,6 +48,8 @@ if(classes[anyClass].students.length < classes[anyClass].limit){
 if((students[1].classes.length === 3)&&(students[2].classes.length === 3)&&
    (students[3].classes.length === 3)&&(students[4].classes.length === 3)){
     showResult('passed test #1 2/4');
+}else{
+    showResult('failed test #1 2/4');
 }
 
 var anyCsci = Math.floor(Math.random()*(classes[2].students.length-(1/1024)));
@@ -137,7 +139,8 @@ try{
 
 
 
-function showResult(msg, passed){
+function showResult(msg){
     console.dir(msg);
-    document.getElementById('results-container').innerHTML += '<p>'+msg+'</p>';
+    document.getElementById('results-container').innerHTML +=
+    '<p class="'+((msg.indexOf('pass')>-1)?'passed-msg':'failed-msg')+'">'+msg+'</p>';
 }
