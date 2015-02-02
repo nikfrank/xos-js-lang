@@ -23,7 +23,7 @@ if(neighbour + ' Kramer' === 'Cosmo Kramer'){
 }
 
 if(greeting.length === 12){
-    showResult('passed test #2 3/4');
+    showResult('passed test #1 3/4');
 }
 
 if((actress[0] === 'J') && (actress[6] === 'L')){
