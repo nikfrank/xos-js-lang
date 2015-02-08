@@ -78,8 +78,12 @@ if('' + 7 + ' Costanza' === child){
     showResult('passed test #3 4/7');
 }
 
-if(actress.split(' ')[1].split('-')[1] === 'Dreyfus'){
-    showResult('passed test #3 5/7');
+try{
+    if(actress.split(' ')[1].split('-')[1] === 'Dreyfus'){
+	showResult('passed test #3 5/7');
+    }
+catch(e){
+    showResult('failed test #3 5/7');
 }
 
 if(quote.replace(/g/g,'') === quote){
