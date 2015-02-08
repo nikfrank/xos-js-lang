@@ -33,7 +33,7 @@ isFormal? showResult('passed test #2 1/3'): showResult('failed test #2 1/3');
 
 var dressed = shirt && tie && pants && hat;
 
-var gettingReady = hasTickets ^ bagsPacked;
+var gettingReady = (hasTickets || bagsPacked) && !(hasTickets && bagsPacked);
 
 if(gettingReady){
     showResult('failed test #2 2/3');
@@ -49,6 +49,26 @@ if(dressed){
     showResult('failed test #2 3/3');
 }
 
+
+// test #3
+
+var first, second, third;
+
+if((first && third) ^ (second ^ third)){
+    showResult('passed test #3 1/3');
+}else{
+    showResult('failed test #3 1/3');
+}
+
+(first ^ second)?
+    showResult('failed test #3 2/3'):
+    showResult('passed test #3 2/3');
+
+var successMessage = !second? 'great success!' : 'blame America!';
+
+(successMessage[0] === 'g')?
+    showResult('passed test #3 3/3'):
+    showResult('failed test #3 3/3');
 
 
 
