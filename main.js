@@ -33,28 +33,32 @@ if((actress[0] === 'J') && (actress[6] === 'L')){
 
 // test #2
 
+if(greeting.indexOf('Hello') !== -1){
+    showResult('passed test #2 1/7');
+}
+
 if(greeting.indexOf(postman) !== -1){
-    showResult('passed test #2 1/6');
+    showResult('passed test #2 2/7');
 }
 
 if(quote[0].toUpperCase() === quote[0]){
-    showResult('passed test #2 2/6');
+    showResult('passed test #2 3/7');
 }
 
-if(greeting.substr(0,5) === 'Hello'){
-    showResult('passed test #2 3/6');
+if(greeting.substr(6,3) === 'New'){
+    showResult('passed test #2 4/7');
 }
 
 if(actress.charAt(3) === 'i'){
-    showResult('passed test #2 4/6');
+    showResult('passed test #2 5/7');
 }
 
 if(actress.substr(-3) === 'fus'){
-    showResult('passed test #2 5/6');
+    showResult('passed test #2 6/7');
 }
 
 if(postman.charCodeAt(2) === 119){
-    showResult('passed test #2 6/6');
+    showResult('passed test #2 7/7');
 }
 
 
