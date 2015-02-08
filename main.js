@@ -67,35 +67,39 @@ if(postman.charCodeAt(2) === 119){
 // be familiar with regexps, or be prepared to learn a bit
 
 if(quote.indexOf('\'') !== -1){
-    showResult('passed test #3 1/7');
+    showResult('passed test #3 1/5');
 }
 
 if(quote.indexOf('\n') !== -1){
-    showResult('passed test #3 2/7');
+    showResult('passed test #3 2/5');
 }
 
 if(quote.indexOf('"') > quote.indexOf('\n')){
-    showResult('passed test #3 3/7');
+    showResult('passed test #3 3/5');
 }
 
 if('' + 7 + ' Costanza' === child){
-    showResult('passed test #3 4/7');
+    showResult('passed test #3 4/5');
 }
 
 try{
     if(actress.split(' ')[1].split('-')[1] === 'Dreyfus'){
-	showResult('passed test #3 5/7');
+	showResult('passed test #3 5/5');
     }
 catch(e){
-    showResult('failed test #3 5/7');
+    showResult('failed test #3 5/5');
 }
 
+// test #4
+// read up on REGEXP in JAVASCRIPT
+
+
 if(quote.replace(/g/g,'') === quote){
-    showResult('passed test #3 6/7');
+    showResult('passed test #4 1/2');
 }
 
 if(quote.match(/close-?talker/g) !== null){
-    showResult('passed test #3 7/7');
+    showResult('passed test #4 2/2');
 }
 
 
